@@ -11,8 +11,8 @@ const App = () => {
     autoplay: true,
     delay: 2500,
     fadeEffect: {
-       crossFade: true
-     },
+      crossFade: true
+    },
   }
   return (
     <section className="landing__splash">
