@@ -1,0 +1,73 @@
+@import '~swiper/swiper.scss';
+
+.landing__splash {
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  height: calc(100vh - 50px);
+  left: 0;
+  right: 0;
+  position: relative;
+  @media (min-width: 576px) {
+    height: 100vh;
+  }
+  & .slide  {
+    display: flex;
+    height: 100%;
+    height: calc(100vh - 50px);
+    align-items: center;
+    flex-wrap: wrap;
+    @media (min-width: 576px) {
+      height: 100vh;
+    }
+    &__image {
+      position: relative;
+      overflow: hidden;
+      height: 50%;
+      height: calc(50vh - 25px);
+      width: 100%;
+      background-size: cover;
+      background-position: bottom;
+      @media (min-width: 576px) {
+        width: 50%;
+        height: 100%;
+      }
+      &.slide {
+        &-1 {
+          &-a {
+            background-image: url('./images/slide-1-a.jpg')
+          }
+          &-b {
+            background-image: url('./images/slide-1-b.jpg')
+          }
+        }
+        &-2{
+          &-a{
+            background-image: url('./images/slide-2-a.jpg')
+          }
+          &-b{
+            background-image: url('./images/slide-2-b.jpg')
+          }
+        }
+        &-3{
+          &-a{
+            background-image: url('./images/slide-3-a.jpg')
+          }
+          &-b{
+            background-image: url('./images/slide-3-b.jpg')
+          }
+        }
+      }
+      & > img {
+        width: 100%;
+        min-height: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        z-index: 0;
+        object-position: 50% 100%;
+      }
+    }
+  }
+}

@@ -1,25 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Swiper from 'react-id-swiper';
+import './App.scss'
 
-function App() {
+const App = () => {
+  const params = {
+    containerClass: 'home__splash swiper-container',
+    loop: true,
+    speed: 2000,
+    autoplay: true,
+    delay: 2500,
+    fadeEffect: {
+      crossFade: true
+    },
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="landing__splash">
+      <div className="landing__splash-background">
+        <Swiper {...params}>
+          <div className="slide">
+            <div className="slide__image slide-1-a" />
+            <div className="slide__image slide-1-b" />
+          </div>
+          <div className="slide">
+            <div className="slide__image slide-2-a" />
+            <div className="slide__image slide-2-b" />
+          </div>
+          <div className="slide">
+            <div className="slide__image slide-3-a" />
+            <div className="slide__image slide-3-b" />
+          </div>
+        </Swiper>
+      </div>
+    </section>
   );
 }
 
