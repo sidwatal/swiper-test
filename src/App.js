@@ -6,12 +6,13 @@ const App = () => {
   const params = {
     containerClass: 'home__splash swiper-container',
     loop: true,
+    effect: 'fade',
     speed: 2000,
     autoplay: true,
     delay: 2500,
     fadeEffect: {
-      crossFade: true
-    },
+       crossFade: true
+     },
   }
   return (
     <section className="landing__splash">
