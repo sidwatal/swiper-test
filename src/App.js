@@ -8,8 +8,10 @@ const App = () => {
     loop: true,
     effect: 'fade',
     speed: 2000,
-    autoplay: true,
-    delay: 2500,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: true,
+    },
     fadeEffect: {
       crossFade: true
     },
